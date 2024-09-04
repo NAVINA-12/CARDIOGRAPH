@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spartan: wght@100;200; 300;400; 500; 600; 700; 800; 900&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family : 'Poppins', sans-serif;
+}
+body{
+width:100%;
+
+}
+#header h1{
+position: relative;
+font-size: 60px;
+background: -webkit-linear-gradient(#eee, #333);
+-webkit-background-clip:text ;
+-webkit-text-fill-color: transparent;
+left:-50px;
+top :0px;
+}
+#header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 80px;
+background: #1a1a1a;
+box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+padding-bottom: 20px;
+z-index: 999;
+position: sticky;
+top: 0;
+left: 0;
+}
+.logo{
+height:80px;
+border-radius: 10px;
+}
+#navbar{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#navbar li{
+list-style: none;
+padding: 0 20px;
+position: relative;
+}
+#navbar li a{
+text-decoration: none;
+font-size: 16px;
+font-weight: 600;
+color: #f6f6f6;
+transition: 0.3s ease;
+}
+#navbar li a:hover{
+color:#0ef;
+}
+#header a span
+{
+ position:absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ border-bottom: 2px solid #0ef;
+ border-radius: 15px;
+ transform: scale(0) translateY(50px);
+ opacity: 0;
+ transition: .5s;
+}
+#header a:hover span{
+ transform:scale(1) translateY(0);
+ opacity:1;
+} 
+.container-fluid
+{
+    background-color: rgb(77, 25, 61);
+}
+</head>
+</style>
+<body>
+        <section id="header">
+            <a ><img src="logo.jpg" class="logo" alt=""></a>
+            <h1>CARDIOGRAPH</h1>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">HOME<span></span></a></li>
+                    <li><a href="login.html">LOGIN<span></span></a></li>
+                    <li><a href="signup.html">SIGN UP<span></span></a></li>
+                    <li><a href="My account"><i class="fa-solid fa-user"></i><span></span></a></li>
+                </ul>
+
+            </div>
+            </section>
+                <div class="container-fluid  p-10 my-12 ">
+                  <h1 class="text-white text-center">EKG</h1>
+                </div>
+                <div class="container">
+                    <img src="ekg.webp" class="rounded mx-auto d-block" alt="" width="304" height="236"> 
+                    </div>
+                    <div class="container">
+                        <h1 class="text-danger">What is an EKG?</h1>
+                        <p class="text-dark">An EKG is a standard painless heart-function test that monitors your heart’s health and detects possible problems before they become serious.</p>
+                        <p class="text-dark">Early detection and treatment of heart conditions is the best way to reduce your risk of a heart attack, stroke, or other heart-related medical complications. See the specialists at the first sign of a problem.</p>
+                        <h1 class="text-danger">Why would I need an EKG?</h1>
+                        </div>
+                        <div class="container mt-100">
+  <ul class="listgroup" "text-center">
+    <li class=list-style-type: square;>Previous heart attack</li>
+    <li class=list-style-type: square;>Coronary artery disease (CAD)</li>
+    <li class=list-style-type: square;>Irregular heart rhythm (arrhythmia)</li>
+    <li class=list-style-type: square;>Chest pain</li>
+    <li class=list-style-type: square;>Heart palpitations</li>
+    <li class=list-style-type: square;>Rapid pulse</li>
+    <li class=list-style-type: square;>Dizziness</li>
+    <li class=list-style-type: square;>Shortness of breath</li>
+    <li class=list-style-type: square;>Fatigue</li>
+    <li class=list-style-type: square;>Weakness</li>
+    <li class=list-style-type: square;>Family history of heart disease</li>
+</ul>
+</div>
+<div class="container">
+    <p class="text-dark">They usually suggest an EKG if you use a pacemaker or another heart disease treatment. The EKG determines how effectively your treatment works.</p>
+    <h1 class="text-danger">What happens after the procedure?</h1>
+    <p class="text-dark">After an EKG, you can resume your daily routine right away. Theresults with you will be discussed by the doctor the same day or at your next appointment.</p>
+    <p class="text-dark">They let you know if you have problems with your heart’s rate, rhythm, structure, or blood and oxygen supply. An EKG can also detect a previous or current heart attack.</p>
+    <p class="text-dark">Based on the results of the EKG, you might need to undergo an echocardiogram, also called an echo, or another diagnostic heart test. Your doctor might ask you to make lifestyle changes, prescribe medication, or order a medical procedure to reduce your chance of heart-related complications.</p>
+
+    </div>
+</body>
+</html>

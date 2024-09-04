@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CARDIOGRAPH</title>
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Spartan: wght@100;200; 300;400; 500; 600; 700; 800; 900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family : 'Poppins', sans-serif;
+}
+body{
+    width:100%;
+    background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(75,14,154,1) 35%,rgba(0,212,255,1) 100%);
+    font-family : 'Poppins', sans-serif;
+
+}
+#header h1{
+    position: relative;
+    font-size: 60px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip:text ;
+    -webkit-text-fill-color: transparent;
+    left:-50px;
+    top :0px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    padding-bottom: 20px;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo{
+    height:80px;
+    border-radius: 10px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #f6f6f6;
+    transition: 0.3s ease;
+}
+#navbar li a:hover{
+    color:#0ef;
+}
+#header a span
+ {
+     position:absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     border-bottom: 2px solid #0ef;
+     border-radius: 15px;
+     transform: scale(0) translateY(50px);
+     opacity: 0;
+     transition: .5s;
+ }
+ #header a:hover span{
+     transform:scale(1) translateY(0);
+     opacity:1;
+} 
+.card{
+    text-align: center;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+}
+#hero p{
+    text-align: center;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(250,255,137,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 10px;
+}
+#hero h2{
+    text-align: center;
+    background: #e3e6f3;
+    padding: 10px;
+}
+#feature{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     background: linear-gradient(90deg,rgba(75,14,154,1) 35%,rgba(0,212,255,1) 100%);
+}
+#feature .fe-box1{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:20px 0;
+    margin-left:10%;
+}
+#feature .fe-box1:hover{
+    box-shadow:10px 20px 54px rgba(70, 62,221, 0.1);
+}
+
+#feature .fe-box1 h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+}
+#feature .fe-box1:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box1:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box1:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box1:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box1:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+#feature .fe-box2{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:15px 0;
+}
+#feature .fe-box2:hover{
+    box-shadow:10px 20px 54px rgba(70, 62,221, 0.1);
+}
+
+#feature .fe-box2 h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+}
+#feature .fe-box2:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box2:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box2:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box2:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box2:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+#feature .fe-box3{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:15px 0;
+}
+#feature .fe-box3:hover{
+    box-shadow:10px 20px 54px rgba(70, 62,221, 0.1);
+}
+
+#feature .fe-box3 h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+}
+#feature .fe-box3:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box3:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box3:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box3:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box3:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+#feature .fe-box4{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:15px 0;
+}
+#feature .fe-box4:hover{
+    box-shadow:10px 20px 54px rgba(70, 62,221, 0.1);
+}
+
+#feature .fe-box4 h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+}
+#feature .fe-box4:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box4:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box4:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box4:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box4:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+#feature .fe-box5{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:15px 0;
+}
+#feature .fe-box5:hover{
+    box-shadow:10px 20px 54px rgba(70, 62,221, 0.1);
+}
+
+#feature .fe-box5 h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);
+}
+#feature .fe-box5:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box5:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box5:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box5:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box5:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+.col{
+    background: linear-gradient(90deg,rgba(1,255,212,0) 35%,rgba(0,212,255,1) 100%);
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer.follow{
+    margin-top: 20px;
+
+}
+footer .follow i{
+    color:#465b52;
+    padding-right:4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,footer a:hover{
+    color:#088178;
+}
+footer .copyright{
+    width:100%;
+    text-align: center;
+}
+#car{
+    width:100%;
+    height:100vh;
+}
+
+            table {
+                font-family: arial, sans-serif;
+                width: 100%;
+              }
+              
+              
+              td, th {
+                border: .5px solid black;
+                text-align: center;
+                padding: 7px;
+                color: black;
+              }
+              .first{
+                  width:934px;
+                  margin-left: 50px;
+              }
+              
+              #hero {
+                      background-image: url('bg.jpg');
+                      background-blend-mode: lighten;
+                      background-repeat: no-repeat;
+                      background-attachment: fixed;
+                      background-size: cover;
+                    }
+              </style>
+    </head>
+    <body>
+        <section id="header">
+            <a ><img src="logo.jpg" class="logo" alt=""></a>
+            <h1>CARDIOGRAPH</h1>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Search">
+                <button class="btn btn-success" type="button">Search</button>
+              </form>
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="index.html">HOME<span></span></a></li>
+                    <li><a href="login.html">LOGIN<span></span></a></li>
+                    <li><a href="signup.html">SIGN UP<span></span></a></li>
+                    <li><a href="My account"><i class="fa-solid fa-user"></i><span></span></a></li>
+                </ul>
+            </div>
+            </section>
+            <section id="hero" >
+                <h2 class="card">What is Cardiograph?</h2>
+                <p style=" font-size:large; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Medical specialty dealing with the diagnosis and treatment of diseases and abnormalities involving the heart and blood vessels</p>
+                <hr>
+                <h2>Why monitor blood pressure (BP)?</h2>
+                <p style="font-size:large; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Hypertension (high blood pressure) is an important health issue in children, because of its
+                    association with obesity. High blood pressure is considered a risk factor for heart disease and
+                    stroke, and high BP in childhood has been linked to high BP in adulthood.</p>
+                <h2 style="text-align: center; color: rgb(9, 9, 9);">Simplified BP table</h2>
+                <table>
+                    <tr>
+                      <th >Simplified Screening BP Table - Further Evaluation Required</th>
+                   </tr>
+                   </table>
+                   <table>
+                      <tr>
+                          <th class="first" >Boys</th>
+                          <th class="second">Girls</th>
+                      </tr>
+                      </table>
+                      <table>
+                      <tr>
+                          <th>Age</th>
+                          <th>systolic</th>
+                          <th>diastolic</th>
+                          <th>systolic</th>
+                          <th>diastolic</th>
+                      </tr>
+                      <tr>
+                          <th>1</th>
+                          <th>98</th>
+                          <th>52</th>
+                          <th>98</th>
+                          <th>54</th>
+                      </tr>
+                      <tr>
+                          <th>2</th>
+                          <th>100</th>
+                          <th>55</th>
+                          <th>101</th>
+                          <th>58</th>
+                      </tr>
+                      <tr>
+                          <th>3</th>
+                          <th>101</th>
+                          <th>58</th>
+                          <th>102</th>
+                          <th>60</th>
+                      </tr>
+                      <tr>
+                          <th>4</th>
+                          <th>102</th>
+                          <th>60</th>
+                          <th>103</th>
+                          <th>62</th>
+                      </tr>
+                      <tr>
+                          <th>5</th>
+                          <th>103</th>
+                          <th>63</th>
+                          <th>104</th>
+                          <th>64</th>
+                      </tr>
+                      <tr>
+                          <th>6</th>
+                          <th>105</th>
+                          <th>66</th>
+                          <th>105</th>
+                          <th>66</th>
+                      </tr>
+                      <tr>
+                          <th>7</th>
+                          <th>106</th>
+                          <th>68</th>
+                          <th>106</th>
+                          <th>68</th>
+                      </tr>
+                      <tr>
+                          <th>8</th>
+                          <th>107</th>
+                          <th>69</th>
+                          <th>107</th>
+                          <th>69</th>
+                      </tr>
+                      <tr>
+                          <th>9</th>
+                          <th>107</th>
+                          <th>70</th>
+                          <th>108</th>
+                          <th>71</th>
+                      </tr>
+                      <tr>
+                          <th>10</th>
+                          <th>108</th>
+                          <th>72</th>
+                          <th>109</th>
+                          <th>72</th>
+                      </tr>
+                      <tr>
+                          <th>11</th>
+                          <th>110</th>
+                          <th>74</th>
+                          <th>111</th>
+                          <th>74</th>
+                      </tr>
+                      <tr>
+                          <th>12</th>
+                          <th>113</th>
+                          <th>75</th>
+                          <th>114</th>
+                          <th>75</th>
+                      </tr>
+                      <tr>
+                          <th>>=13</th>
+                          <th>120</th>
+                          <th>80</th>
+                          <th>120</th>
+                          <th>80</th>
+                      </tr>
+                  </table>
+                  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+                    
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="cor1.jpg" alt="Los Angeles" class="d-block" id="car">
+                        <div class="carousel-caption">
+                          <h3>Friendly Interactions</h3>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="cor2.jpg" alt="Chicago" class="d-block"id="car" >
+                        <div class="carousel-caption">
+                          <h3>Worldclass Machines</h3>
+                        </div> 
+                      </div>
+                      <div class="carousel-item">
+                        <img src="cor3.jpg" alt="New York" class="d-block" id="car">
+                        <div class="carousel-caption">
+                          <h3>Your Pulse In Our Vision</h3>
+                        </div>  
+                      </div>
+                    </div>
+                    
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </button>
+                  </div>
+            </section>
+            <section style="background: linear-gradient(90deg, rgba(36,65,61,1) 0%, rgba(0,2,36,0.32209380334164917) 0%, rgba(145,255,137,1) 0%, rgba(0,212,255,1) 100%);">
+            <h1 style="padding:10px; text-align: center;">PQRST Wave</h1>
+            <ol style="font-size:large; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 30px;">
+                <li>   P-Wave:It’s the initial upward deflection on the ECG.</li>
+                <li>   PR Interval:It reflects the time taken for the electrical impulse to travel from the atria to the ventricles.</li>
+                <li>   QRS Complex:The QRS complex signifies ventricular depolarization</li>
+                <li>   ST Segment:It should be isoelectric (at the baseline) unless there’s an underlying issue.</li>
+                <li>   T-Wave:The T-wave reflects ventricular repolarization.</li>
+            </ol>
+            <br>
+            <section id="feature" class="section-p1">
+            <div class="fe-box1">
+                <img onclick="window.location.href='ekg.html'" style="width:100px ;height:80px" src="ekg.webp" alt="">
+                <h6>EKG</h6>
+            </div>
+            <div class="fe-box2">
+                <img onclick="window.location.href='watchman.html'" style="width:100px ;height:100px" src="wman.webp" alt="">
+                <h6>Watch Man</h6>
+            </div>
+            <div class="fe-box3">
+            <img onclick="window.location.href='ultra.html'" style="width:100px ;height:100px" src="ultra.webp" alt="">
+                <h6>Ultra Sound</h6>
+            </div>
+            <div class="fe-box4">
+            <img onclick="window.location.href='hotler.html'" style="width:100px ;height:100px" src="hotler.webp" alt="">
+                <h6>Holter Monitor</h6>
+            </div>
+            <div class="fe-box5">
+            <img onclick="window.location.href='ablation.html'" style="width:100px ;height:100px" src="ablation.webp" alt="">
+                <h6>Ablations</h6>
+            </div>
+        </section>
+            <hr>
+            <h2 style="padding: 10px; color: rgb(24,21,79);"><center><marquee>Join us to have healthier conservation with <mark>CardioGraph</mark></h2></marquee></center></h2>
+                  <hr>
+                  <footer style=" margin-left: 10px;" class="section-p1">
+                    <div class="col">
+                        <img class="logo" src="logo.jpg" alt="">
+                        <br>
+                        <h4>Contact</h4>
+                        <h4><strong>Address: </strong>Velalar College of Engineering and Technology</h4>
+                        <h4><strong>Phone</strong>+91 9865339401</h4>
+                        <div class="follow">
+                            <h4>Follow us</h4>
+                            <div class="icon">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+              <div class="copyright">
+                    <p> Medical Websites Powered by CARDIOGRAPH </p>
+                  </div>
+        
+                </footer>
+            </section>
+          </body>
+          </html>
